@@ -10,7 +10,7 @@ When in the project folder:
 3) flask run
 4) open up http://127.0.0.1:5000/ in a browser
 
-Note: After running one movie poster, python will quit. Repeat steps 3 and 4 to run again.
+Note: After running one movie poster, python may quit. Repeat steps 3 and 4 to run again.
 
 if flask doesn't work check this out: https://flask.palletsprojects.com/en/1.1.x/quickstart/
 
