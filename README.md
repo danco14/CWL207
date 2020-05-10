@@ -12,5 +12,5 @@ When in the project folder:
 
 if flask doesn't work check this out: https://flask.palletsprojects.com/en/1.1.x/quickstart/
 
-![Starting page to enter the poster URL]('homepage.png')
-![Predicted Rating and Histogram]('predict.png')
+![Starting page to enter the poster URL]('./homepage.png')
+![Predicted Rating and Histogram]('./predict.png')
