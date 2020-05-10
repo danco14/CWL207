@@ -6,7 +6,7 @@ Using this, we created a tool that can take in a movie poster's image url and re
 In order to run, you will need to have python3 installed.
 When in the project folder:
 1) run "pip install -r requirements.txt" in order to install all the required libraries
-2) export FLASK_APP=hello.py
+2) export FLASK_APP=main.py
 3) flask run
 4) open up http://127.0.0.1:5000/ in a browser
 
