@@ -10,4 +10,9 @@ When in the project folder:
 3) flask run
 4) open up http://127.0.0.1:5000/ in a browser
 
+Note: After running one movie poster, python may quit. Repeat steps 3 and 4 to run again.
+
 if flask doesn't work check this out: https://flask.palletsprojects.com/en/1.1.x/quickstart/
+
+![Starting page to enter the poster URL](https://github.com/danco14/CWL207/blob/master/homepage.png)
+![Predicted Rating and Histogram](https://github.com/danco14/CWL207/blob/master/predict.png)
