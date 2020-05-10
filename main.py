@@ -5,6 +5,10 @@ import heapq
 from collections import Counter
 from PIL import Image
 import requests
+import matplotlib.pyplot as plt
+import io
+import base64
+import seaborn as sns
 
 app = Flask(__name__)
 movie_data = pd.read_pickle('MoviePosters.csv').transpose()
@@ -27,7 +31,10 @@ def predict():
     heapq.heapify(nodes)
     nearest = heapq.nsmallest(30, nodes)
 
-    # closest = movie_data.iloc[nearest[0][1]]
+    closest = []
+    for i in range(30):
+        closest.append(movie_data.iloc[nearest[i][1]])
+    closest = pd.concat(closest,axis=1).transpose()
 
     mode = Counter()
     unrounded = {}
@@ -41,4 +48,17 @@ def predict():
 
     rating = mode.most_common(1)[0][0]
     predicted_rating = round(unrounded[rating]/mode.most_common(1)[0][1],1)
-    return '<div style="text-align:center"> <img src=%s width="400" height="600"></img><h1> Rating: %.1f </h1><br/> <a style="font-size:30" href="/">Go Back Home</a></div>' % (url,predicted_rating)
+
+    img = io.BytesIO()
+    sns.set()
+    plt.clf()
+    plt.cla()
+    plt.hist(closest.rating,bins=20)
+    plt.xlabel('Ratings')
+    plt.ylabel('Count')
+    plt.title('Histogram of 30 closest movie posters')
+    plt.savefig(img,format='png')
+    img.seek(0)
+    plot_url = base64.b64encode(img.getvalue()).decode()
+
+    return render_template('predict.html',postersrc=url,rating=predicted_rating,plot_url=plot_url)
