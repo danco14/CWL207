@@ -1,6 +1,6 @@
 # CWL207
 
-For this project, we borrowed a dataset of imdb and modified it so that we have a dataset of 10,000 movie posters along with their imdb ratings.
+For this project, we borrowed a dataset (https://www.kaggle.com/neha1703/movie-genre-from-its-poster) of imdb movie listings and modified it so that we have a dataset of 10,000 movie posters along with their imdb ratings.
 Using this, we created a tool that can take in a movie poster's image url and return an estimated rating of the movie based on what similar movie posters received. Our tool will return the predicted rating along with a histogram of the ratings of the similar movie posters.
 
 In order to run, you will need to have python3 installed.
