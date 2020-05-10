@@ -28,7 +28,6 @@ nearest = heapq.nsmallest(30, nodes)
 closest = []
 for i in range(3):
     closest.append(movie_data.iloc[nearest[i][1]])
-
 mode = Counter()
 unrounded = {}
 for i in nearest:
