@@ -1,0 +1,16 @@
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+input[type='text']{
+  width:60%;
+}
+h1{
+  text-align: center;
+}
+div{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}

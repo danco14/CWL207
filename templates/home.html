@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KNN</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>
+      Predict a movie's rating based on the poster!
+    </h1>
+    <div>
+      <form action="/predict" method="post">
+            Poster URL: <input type="text" name="poster_url">  <br />
+            <br/>
+            <input type="submit" name= "form" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
