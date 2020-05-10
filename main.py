@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import io
 import base64
 import seaborn as sns
+import matplotlib
 
 app = Flask(__name__)
 movie_data = pd.read_pickle('MoviePosters.csv').transpose()
@@ -48,7 +49,7 @@ def predict():
 
     rating = mode.most_common(1)[0][0]
     predicted_rating = round(unrounded[rating]/mode.most_common(1)[0][1],1)
-
+    matplotlib.use('Agg')
     img = io.BytesIO()
     sns.set()
     plt.clf()
