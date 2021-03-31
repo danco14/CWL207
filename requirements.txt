@@ -32,7 +32,7 @@ itsdangerous==0.24
 jieba3k==0.35.1
 Jinja2==2.9.6
 kiwisolver==1.2.0
-lxml==3.8.0
+lxml==4.6.3
 MarkupSafe==1.0
 matplotlib==3.2.1
 monotonic==1.3
